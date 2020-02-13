@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="clientui" />
-        <module name="eureka-server" />
         <module name="user" />
         <module name="book" />
         <module name="config-server" />
+        <module name="zuul-server" />
+        <module name="eureka-server" />
+        <module name="clientui" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -18,7 +19,9 @@
       <module name="clientui" target="1.8" />
       <module name="config-server" target="1.8" />
       <module name="eureka-server" target="1.8" />
+      <module name="microservice-clientui" target="1.8" />
       <module name="user" target="1.8" />
+      <module name="zuul-server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -27,7 +30,9 @@
       <module name="clientui" options="-parameters" />
       <module name="config-server" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="microservice-clientui" options="-parameters" />
       <module name="user" options="-parameters" />
+      <module name="zuul-server" options="-parameters" />
     </option>
   </component>
 </project>
