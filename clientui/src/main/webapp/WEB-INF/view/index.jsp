@@ -1,5 +1,4 @@
-<%@ page pageEncoding="UTF-8" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html>
 <!--
 	ustora by freshdesignweb.com
@@ -22,12 +21,12 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../../../resources/META-INF/resources/css/font-awesome.min.css" type="text/css"/>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../css/owl.carousel.css" type="text/css"/>
-    <link rel="stylesheet" href="../css/style.css" type="text/css"/>
-    <link rel="stylesheet" href="../css/responsive.css" type="text/css"/>
+    <link rel="stylesheet" href="../../../resources/META-INF/resources/css/owl.carousel.css" type="text/css"/>
+    <link rel="stylesheet" href="../../../resources/META-INF/resources/css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="../../../resources/META-INF/resources/css/responsive.css" type="text/css"/>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -46,8 +45,8 @@
                     <ul>
                         <li><a href="#"><i class="fa fa-user"></i> My Account</a></li>
                         <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
-                        <li><a href="cart.html"><i class="fa fa-user"></i> My Cart</a></li>
-                        <li><a href="checkout.html"><i class="fa fa-user"></i> Checkout</a></li>
+                        <li><a href="../../../resources/templates/cart.html"><i class="fa fa-user"></i> My Cart</a></li>
+                        <li><a href="../../../resources/templates/checkout.html"><i class="fa fa-user"></i> Checkout</a></li>
                         <li><a href="#"><i class="fa fa-user"></i> Login</a></li>
                     </ul>
                 </div>
@@ -85,13 +84,13 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="logo">
-                    <h1><a href="./"><img src="../img/logo.png"/></a></h1>
+                    <h1><a href="../../../resources/templates"><img src="../../../resources/META-INF/resources/img/logo.png"/></a></h1>
                 </div>
             </div>
 
             <div class="col-sm-6">
                 <div class="shopping-item">
-                    <a href="cart.html">Cart - <span class="cart-amunt">$100</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                    <a href="../../../resources/templates/cart.html">Cart - <span class="cart-amunt">$100</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
                 </div>
             </div>
         </div>
@@ -112,10 +111,10 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="index.jsp">Home</a></li>
-                    <li><a href="shop.html">Shop page</a></li>
-                    <li><a href="single-product.html">Single product</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="../../../resources/templates/shop.html">Shop page</a></li>
+                    <li><a href="../../../resources/templates/single-product.html">Single product</a></li>
+                    <li><a href="../../../resources/templates/cart.html">Cart</a></li>
+                    <li><a href="../../../resources/templates/checkout.html">Checkout</a></li>
                     <li><a href="#">Category</a></li>
                     <li><a href="#">Others</a></li>
                     <li><a href="#">Contact</a></li>
@@ -216,11 +215,11 @@
                                 <img src="../../img/product-1.jpg" alt="">
                                 <div class="product-hover">
                                     <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                    <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                    <a href="../../../resources/templates/single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                 </div>
                             </div>
 
-                            <h2><a href="single-product.html">Samsung Galaxy s5- 2015</a></h2>
+                            <h2><a href="../../../resources/templates/single-product.html">Samsung Galaxy s5- 2015</a></h2>
 
                             <div class="product-carousel-price">
                                 <ins>$700.00</ins> <del>$100.00</del>
@@ -231,7 +230,7 @@
                                 <img src="../../img/product-2.jpg" alt="">
                                 <div class="product-hover">
                                     <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                    <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                    <a href="../../../resources/templates/single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                 </div>
                             </div>
 
@@ -245,7 +244,7 @@
                                 <img src="../../img/product-3.jpg" alt="">
                                 <div class="product-hover">
                                     <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                    <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                    <a href="../../../resources/templates/single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                 </div>
                             </div>
 
@@ -260,11 +259,11 @@
                                 <img src="../../img/product-4.jpg" alt="">
                                 <div class="product-hover">
                                     <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                    <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                    <a href="../../../resources/templates/single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                 </div>
                             </div>
 
-                            <h2><a href="single-product.html">Sony microsoft</a></h2>
+                            <h2><a href="../../../resources/templates/single-product.html">Sony microsoft</a></h2>
 
                             <div class="product-carousel-price">
                                 <ins>$200.00</ins> <del>$225.00</del>
@@ -272,10 +271,10 @@
                         </div>
                         <div class="single-product">
                             <div class="product-f-image">
-                                <img src="../img/product-5.jpg" alt="">
+                                <img src="../../../resources/META-INF/resources/img/product-5.jpg" alt="">
                                 <div class="product-hover">
                                     <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                    <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                    <a href="../../../resources/templates/single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                 </div>
                             </div>
 
@@ -290,11 +289,11 @@
                                 <img src="../../img/product-6.jpg" alt="">
                                 <div class="product-hover">
                                     <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                    <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                    <a href="../../../resources/templates/single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                 </div>
                             </div>
 
-                            <h2><a href="single-product.html">Samsung gallaxy note 4</a></h2>
+                            <h2><a href="../../../resources/templates/single-product.html">Samsung gallaxy note 4</a></h2>
 
                             <div class="product-carousel-price">
                                 <ins>$400.00</ins>
@@ -338,8 +337,8 @@
                     <h2 class="product-wid-title">Top Sellers</h2>
                     <a href="" class="wid-view-more">View All</a>
                     <div class="single-wid-product">
-                        <a href="single-product.html"><img src="../../img/product-thumb-1.jpg" alt="" class="product-thumb"></a>
-                        <h2><a href="single-product.html">Sony Smart TV - 2015</a></h2>
+                        <a href="../../../resources/templates/single-product.html"><img src="../../img/product-thumb-1.jpg" alt="" class="product-thumb"></a>
+                        <h2><a href="../../../resources/templates/single-product.html">Sony Smart TV - 2015</a></h2>
                         <div class="product-wid-rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -352,8 +351,8 @@
                         </div>
                     </div>
                     <div class="single-wid-product">
-                        <a href="single-product.html"><img src="../../img/product-thumb-2.jpg" alt="" class="product-thumb"></a>
-                        <h2><a href="single-product.html">Apple new mac book 2015</a></h2>
+                        <a href="../../../resources/templates/single-product.html"><img src="../../img/product-thumb-2.jpg" alt="" class="product-thumb"></a>
+                        <h2><a href="../../../resources/templates/single-product.html">Apple new mac book 2015</a></h2>
                         <div class="product-wid-rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -366,8 +365,8 @@
                         </div>
                     </div>
                     <div class="single-wid-product">
-                        <a href="single-product.html"><img src="../../img/product-thumb-3.jpg" alt="" class="product-thumb"></a>
-                        <h2><a href="single-product.html">Apple new i phone 6</a></h2>
+                        <a href="../../../resources/templates/single-product.html"><img src="../../img/product-thumb-3.jpg" alt="" class="product-thumb"></a>
+                        <h2><a href="../../../resources/templates/single-product.html">Apple new i phone 6</a></h2>
                         <div class="product-wid-rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -386,8 +385,8 @@
                     <h2 class="product-wid-title">Recently Viewed</h2>
                     <a href="#" class="wid-view-more">View All</a>
                     <div class="single-wid-product">
-                        <a href="single-product.html"><img src="../../img/product-thumb-4.jpg" alt="" class="product-thumb"></a>
-                        <h2><a href="single-product.html">Sony playstation microsoft</a></h2>
+                        <a href="../../../resources/templates/single-product.html"><img src="../../img/product-thumb-4.jpg" alt="" class="product-thumb"></a>
+                        <h2><a href="../../../resources/templates/single-product.html">Sony playstation microsoft</a></h2>
                         <div class="product-wid-rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -400,8 +399,8 @@
                         </div>
                     </div>
                     <div class="single-wid-product">
-                        <a href="single-product.html"><img src="../../img/product-thumb-1.jpg" alt="" class="product-thumb"></a>
-                        <h2><a href="single-product.html">Sony Smart Air Condtion</a></h2>
+                        <a href="../../../resources/templates/single-product.html"><img src="../../img/product-thumb-1.jpg" alt="" class="product-thumb"></a>
+                        <h2><a href="../../../resources/templates/single-product.html">Sony Smart Air Condtion</a></h2>
                         <div class="product-wid-rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -414,8 +413,8 @@
                         </div>
                     </div>
                     <div class="single-wid-product">
-                        <a href="single-product.html"><img src="../../img/product-thumb-2.jpg" alt="" class="product-thumb"></a>
-                        <h2><a href="single-product.html">Samsung gallaxy note 4</a></h2>
+                        <a href="../../../resources/templates/single-product.html"><img src="../../img/product-thumb-2.jpg" alt="" class="product-thumb"></a>
+                        <h2><a href="../../../resources/templates/single-product.html">Samsung gallaxy note 4</a></h2>
                         <div class="product-wid-rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -434,8 +433,8 @@
                     <h2 class="product-wid-title">Top New</h2>
                     <a href="#" class="wid-view-more">View All</a>
                     <div class="single-wid-product">
-                        <a href="single-product.html"><img src="../../img/product-thumb-3.jpg" alt="" class="product-thumb"></a>
-                        <h2><a href="single-product.html">Apple new i phone 6</a></h2>
+                        <a href="../../../resources/templates/single-product.html"><img src="../../img/product-thumb-3.jpg" alt="" class="product-thumb"></a>
+                        <h2><a href="../../../resources/templates/single-product.html">Apple new i phone 6</a></h2>
                         <div class="product-wid-rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -448,8 +447,8 @@
                         </div>
                     </div>
                     <div class="single-wid-product">
-                        <a href="single-product.html"><img src="../../img/product-thumb-4.jpg" alt="" class="product-thumb"></a>
-                        <h2><a href="single-product.html">Samsung gallaxy note 4</a></h2>
+                        <a href="../../../resources/templates/single-product.html"><img src="../../img/product-thumb-4.jpg" alt="" class="product-thumb"></a>
+                        <h2><a href="../../../resources/templates/single-product.html">Samsung gallaxy note 4</a></h2>
                         <div class="product-wid-rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -462,8 +461,8 @@
                         </div>
                     </div>
                     <div class="single-wid-product">
-                        <a href="single-product.html"><img src="../../img/product-thumb-1.jpg" alt="" class="product-thumb"></a>
-                        <h2><a href="single-product.html">Sony playstation microsoft</a></h2>
+                        <a href="../../../resources/templates/single-product.html"><img src="../../img/product-thumb-1.jpg" alt="" class="product-thumb"></a>
+                        <h2><a href="../../../resources/templates/single-product.html">Sony playstation microsoft</a></h2>
                         <div class="product-wid-rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
