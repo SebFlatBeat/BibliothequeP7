@@ -1,3 +1,5 @@
+<%@ page pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <!--
 	ustora by freshdesignweb.com
@@ -109,7 +111,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="active"><a href="index.jsp">Home</a></li>
                     <li><a href="shop.html">Shop page</a></li>
                     <li><a href="single-product.html">Single product</a></li>
                     <li><a href="cart.html">Cart</a></li>
@@ -270,7 +272,7 @@
                         </div>
                         <div class="single-product">
                             <div class="product-f-image">
-                                <img src="../static/img/product-5.jpg" alt="">
+                                <img src="../img/product-5.jpg" alt="">
                                 <div class="product-hover">
                                     <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                     <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
