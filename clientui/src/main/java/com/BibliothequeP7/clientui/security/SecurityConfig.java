@@ -5,6 +5,7 @@ import com.BibliothequeP7.clientui.service.UserBookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -71,6 +72,9 @@ public class SecurityConfig  extends WebSecurityConfigurerAdapter {
         web.ignoring().antMatchers("/scripts/**");
         web.ignoring().antMatchers("/images/**");
         web.ignoring().antMatchers("/resources/**");
+        web.ignoring().antMatchers("/ext/*/api/**");
+        web.ignoring().antMatchers(HttpMethod.OPTIONS, "/**");
+        web.ignoring().antMatchers("/app/**/*.{js,html}");
     }
 }
 
