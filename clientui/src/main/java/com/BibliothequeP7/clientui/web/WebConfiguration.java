@@ -9,7 +9,6 @@ import org.springframework.web.servlet.view.JstlView;
 
 
 @Configuration
-@EnableWebMvc
 @EnableSpringDataWebSupport
 @ComponentScan("com.BibliothequeP7.clientui")
 public class WebConfiguration implements WebMvcConfigurer {

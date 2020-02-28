@@ -6,16 +6,15 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import java.util.List;
 
 @FeignClient(name = "zuul-server")
 @RibbonClient(name = "user")
 public interface UserProxy {
 
-    @GetMapping(value = "/user/all-account")
-    List<UserBean> listUsers();
+    @GetMapping(value = "/user/{userName}/login")
+    UserBean login(@PathVariable String userName);
 
-    @GetMapping(value = "/microservice-users/compte/{id}/moncompte")
+    @GetMapping(value = "/user/account/{id}/myaccount")
     UserBean getUser(@PathVariable("id") Long id);
+    }
 
-}

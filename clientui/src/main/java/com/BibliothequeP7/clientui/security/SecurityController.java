@@ -1,4 +1,5 @@
-package com.BibliothequeP7.user.security;
+package com.BibliothequeP7.clientui.security;
+
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +21,7 @@ public class SecurityController {
      */
     @RequestMapping("/login")
     public String login() {
-        return "redirect:/index";
+        return "login";
     }
 
 }

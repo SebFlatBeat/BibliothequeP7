@@ -1,7 +1,7 @@
-package com.BibliothequeP7.user.security;
+package com.BibliothequeP7.clientui.security;
 
 
-import com.BibliothequeP7.user.service.UserBookService;
+import com.BibliothequeP7.clientui.service.UserBookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -49,11 +49,11 @@ public class SecurityConfig  extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
-        http.authorizeRequests().antMatchers("/", "/index", "/css/**", "/font-awesome/**", "/js/**", "/color/**", "/img/**", "/contactform/**", "/fonts/**").permitAll()
+        http.authorizeRequests().antMatchers("/","/login" ,"/index", "/css/**", "/cssLogin/**", "/fonts/**", "/fontsLogin/**", "/img/**", "/iconsLogin/**", "/js/**,","/jsLogin/**","/vendorLogin/**").permitAll()
                 .antMatchers("/**").authenticated()
                 .and()
                 .formLogin()
-                .loginPage("/index")
+                .loginPage("/login")
                 .loginProcessingUrl("/login")
                 .failureUrl("/login?error")
                 .and()

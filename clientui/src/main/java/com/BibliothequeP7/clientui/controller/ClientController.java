@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -17,17 +18,17 @@ public class ClientController {
     private UserProxy userProxy;
 
     @GetMapping("/index")
-    public String homePage(Model model, HttpServletRequest request) {
-        HttpSession session = request.getSession();
+    public String homePage() {
 
-        Long idSession = (Long) session.getAttribute("id");
-
-        if (session.getAttribute("id") != null ) {
-            UserBean user = userProxy.getUser(idSession);
-            model.addAttribute("user", user);
-        }
         return "index";
     }
+
+    @GetMapping("/espacePerso")
+    public String spaceHome(){
+
+        return "espacePerso";
+    }
+
 
 
 }

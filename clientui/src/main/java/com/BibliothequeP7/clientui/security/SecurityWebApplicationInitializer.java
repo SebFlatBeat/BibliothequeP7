@@ -1,4 +1,4 @@
-package com.BibliothequeP7.user.security;
+package com.BibliothequeP7.clientui.security;
 
 import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
 

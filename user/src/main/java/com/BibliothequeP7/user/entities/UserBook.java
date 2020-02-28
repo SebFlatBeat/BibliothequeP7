@@ -15,12 +15,12 @@ public class UserBook {
     private Long id;
     @Size(max=50)
     @NotBlank
-    @NotEmpty( message = "Merci de rentrer un pseudo" )
+    @NotEmpty( message = "Merci de saisir un pseudo" )
     private String userName;
     @Size(max=100)
     @NotBlank
-    @Email( message = "Merci de rentrer une adresse mail valide." )
-    @NotEmpty( message = "Merci de rentrer une adresse email" )
+    @Email( message = "Merci de saisir une adresse mail valide." )
+    @NotEmpty( message = "Merci de saisir une adresse email" )
     private String email;
     @Size(max=100)
     @NotBlank
@@ -36,11 +36,11 @@ public class UserBook {
     public UserBook(Long id,
                     @Size(max=50)
                     @NotBlank
-                    @NotEmpty( message = "Merci de rentrer un pseudo" )String userName,
+                    @NotEmpty( message = "Merci de saisir un pseudo" )String userName,
                     @Size(max=100)
                     @NotBlank
-                    @Email( message = "Merci de rentrer une adresse mail valide." )
-                    @NotEmpty( message = "Merci de rentrer une adresse email" )String email,
+                    @Email( message = "Merci de saisir une adresse mail valide." )
+                    @NotEmpty( message = "Merci de saisir une adresse email" )String email,
                     @Size(max=100)
                     @NotBlank
                     String password){

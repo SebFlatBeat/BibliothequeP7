@@ -1,25 +1,24 @@
-package com.BibliothequeP7.user.service;
+package com.BibliothequeP7.clientui.service;
 
-import com.BibliothequeP7.user.dao.UserDao;
-import com.BibliothequeP7.user.entities.UserBook;
+
+import com.BibliothequeP7.clientui.beans.UserBean;
+import com.BibliothequeP7.clientui.proxies.UserProxy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-import java.util.Optional;
 
 public class UserBookService implements UserDetailsService {
-
     @Autowired
-    private UserDao userDao;
+    UserProxy userProxy;
 
     @Override
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
-        Optional<UserBook> userBook = userDao.findByUserName(userName);
+        UserBean userBook = userProxy.login(userName);
 
-        if (userBook.isPresent()){
-            return (UserDetails) userBook.get();
+        if (userBook != null){
+            return (UserDetails) userBook;
         }else{
             throw new UsernameNotFoundException(String.format("Username[%s] not found"));
         }
