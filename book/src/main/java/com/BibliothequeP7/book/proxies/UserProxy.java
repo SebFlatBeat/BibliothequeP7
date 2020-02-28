@@ -1,21 +1,16 @@
-package com.BibliothequeP7.clientui.proxies;
+package com.BibliothequeP7.book.proxies;
 
-import com.BibliothequeP7.clientui.beans.UserBean;
+import com.BibliothequeP7.book.beans.UserBean;
+import com.BibliothequeP7.book.configurations.FeignConfig;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import java.util.List;
-
-@FeignClient(name = "zuul-server")
+@FeignClient(name = "zuul-server", contextId="userProxy", configuration= FeignConfig.class )
 @RibbonClient(name = "user")
 public interface UserProxy {
 
-    @GetMapping(value = "/user/all-account")
-    List<UserBean> listUsers();
-
-    @GetMapping(value = "/microservice-users/compte/{id}/moncompte")
+    @GetMapping(value = "/user/compte/{id}/moncompte")
     UserBean getUser(@PathVariable("id") Long id);
-
 }
