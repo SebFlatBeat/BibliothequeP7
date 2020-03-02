@@ -1,6 +1,5 @@
 package com.BibliothequeP7.clientui.service;
 
-
 import com.BibliothequeP7.clientui.beans.UserBean;
 import com.BibliothequeP7.clientui.proxies.UserProxy;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,9 +15,8 @@ public class UserBookService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
         UserBean userBook = userProxy.login(userName);
-
         if (userBook != null){
-            return (UserDetails) userBook;
+            return userBook;
         }else{
             throw new UsernameNotFoundException(String.format("Username[%s] not found"));
         }

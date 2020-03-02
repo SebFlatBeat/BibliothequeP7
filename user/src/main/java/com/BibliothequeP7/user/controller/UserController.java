@@ -26,7 +26,6 @@ public class UserController {
     @GetMapping("/{userName}/login")
     public Optional<UserBook> login (@PathVariable String userName){
        Optional<UserBook> userBook = userDao.findByUserName(userName);
-
         return userBook;
     }
 

@@ -15,10 +15,7 @@ public class SecurityController {
         return "redirect:/index";
     }
 
-    /**
-     *
-     * @return redirect:/index
-     */
+
     @RequestMapping("/login")
     public String login() {
         return "login";

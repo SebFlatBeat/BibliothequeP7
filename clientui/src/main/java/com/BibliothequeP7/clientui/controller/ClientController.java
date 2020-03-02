@@ -2,14 +2,13 @@ package com.BibliothequeP7.clientui.controller;
 
 import com.BibliothequeP7.clientui.beans.UserBean;
 import com.BibliothequeP7.clientui.proxies.UserProxy;
+import com.BibliothequeP7.clientui.service.UserBookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.PostMapping;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 @Controller
 public class ClientController {
@@ -28,7 +27,6 @@ public class ClientController {
 
         return "espacePerso";
     }
-
 
 
 }
