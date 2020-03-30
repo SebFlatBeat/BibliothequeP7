@@ -1,24 +1,36 @@
 package com.BibliothequeP7.clientui.beans;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class BookBean {
-    private int id;
+    private Long id;
 
     private String titre;
 
-    private String description;
+    private String auteurPrincipalNom;
 
-    private String image;
+    private String auteurPrincipalPrenom;
 
-    private Double prix;
+    private String isbn;
+
+    private String editeur;
+
+    private String anneeEdition;
+
+    private String section;
+
+    private int nbreExemplaire;
 
     public BookBean() {
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -30,28 +42,60 @@ public class BookBean {
         this.titre = titre;
     }
 
-    public String getDescription() {
-        return description;
+    public String getAuteurPrincipalNom() {
+        return auteurPrincipalNom;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setAuteurPrincipalNom(String auteurPrincipalNom) {
+        this.auteurPrincipalNom = auteurPrincipalNom;
     }
 
-    public String getImage() {
-        return image;
+    public String getAuteurPrincipalPrenom() {
+        return auteurPrincipalPrenom;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setAuteurPrincipalPrenom(String auteurPrincipalPrenom) {
+        this.auteurPrincipalPrenom = auteurPrincipalPrenom;
     }
 
-    public Double getPrix() {
-        return prix;
+    public String getIsbn() {
+        return isbn;
     }
 
-    public void setPrix(Double prix) {
-        this.prix = prix;
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public String getEditeur() {
+        return editeur;
+    }
+
+    public void setEditeur(String editeur) {
+        this.editeur = editeur;
+    }
+
+    public String getAnneeEdition() {
+        return anneeEdition;
+    }
+
+    public void setAnneeEdition(String anneeEdition) {
+        this.anneeEdition = anneeEdition;
+    }
+
+    public String getSection() {
+        return section;
+    }
+
+    public void setSection(String section) {
+        this.section = section;
+    }
+
+    public int getNbreExemplaire() {
+        return nbreExemplaire;
+    }
+
+    public void setNbreExemplaire(int nbreExemplaire) {
+        this.nbreExemplaire = nbreExemplaire;
     }
 
     @Override
@@ -59,9 +103,13 @@ public class BookBean {
         return "BookBean{" +
                 "id=" + id +
                 ", titre='" + titre + '\'' +
-                ", description='" + description + '\'' +
-                ", image='" + image + '\'' +
-                ", prix=" + prix +
+                ", auteurPrincipalNom='" + auteurPrincipalNom + '\'' +
+                ", auteurPrincipalPrenom='" + auteurPrincipalPrenom + '\'' +
+                ", isbn='" + isbn + '\'' +
+                ", editeur='" + editeur + '\'' +
+                ", anneeEdition='" + anneeEdition + '\'' +
+                ", section='" + section + '\'' +
+                ", nbreExemplaire=" + nbreExemplaire +
                 '}';
     }
 }

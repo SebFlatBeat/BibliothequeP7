@@ -5,11 +5,13 @@ import com.BibliothequeP7.clientui.configurations.FeignConfig;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
 
-@FeignClient(name = "zuul-server", contextId="userProxy", configuration= FeignConfig.class)
+@FeignClient(name = "zuul-server", contextId="userProxy", configuration= FeignConfig.class, url = "http://localhost:9004")
 @RibbonClient(name = "user")
 @Component
 public interface UserProxy {
@@ -18,7 +20,7 @@ public interface UserProxy {
     @GetMapping(value = "/user/{userName}/login")
     UserBean login(@PathVariable String userName);
 
-    @GetMapping(value = "/user/account/{id}/myaccount")
-    UserBean getUser(@PathVariable("id") Long id);
+    @PostMapping(value = "/user/register")
+    UserBean register();
     }
 

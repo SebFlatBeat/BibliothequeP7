@@ -7,8 +7,9 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
-@FeignClient(name = "zuul-server", contextId="bookProxy", configuration= FeignConfig.class)
+@FeignClient(name = "zuul-server", contextId="bookProxy", configuration= FeignConfig.class, url = "http://localhost:9004")
 @RibbonClient(name = "book")
 public interface BookProxy {
+
 
 }

@@ -1,8 +1,10 @@
 package com.BibliothequeP7.clientui.controller;
 
 import com.BibliothequeP7.clientui.beans.UserBean;
+import com.BibliothequeP7.clientui.proxies.BookProxy;
 import com.BibliothequeP7.clientui.proxies.UserProxy;
 import com.BibliothequeP7.clientui.service.UserBookService;
+import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
@@ -16,17 +18,31 @@ public class ClientController {
     @Autowired
     private UserProxy userProxy;
 
-    @GetMapping("/index")
-    public String homePage() {
+    @Autowired
+    private BookProxy bookProxy;
+
+    @GetMapping(value = {"/","/index"})
+    public String index() {
 
         return "index";
     }
 
     @GetMapping("/espacePerso")
-    public String spaceHome(){
+    public String espacePerso(){
 
         return "espacePerso";
     }
 
+    @GetMapping("/register")
+    public String register(){
+
+        return "register";
+    }
+
+    @PostMapping("/register")
+    public UserBean registerPost(){
+        UserBean newUser = userProxy.register();
+        return newUser;
+    }
 
 }

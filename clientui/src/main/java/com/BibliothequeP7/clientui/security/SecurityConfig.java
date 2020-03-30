@@ -69,8 +69,15 @@ public class SecurityConfig  extends WebSecurityConfigurerAdapter {
     public void configure(WebSecurity web) throws Exception {
         //Web resources
         web.ignoring().antMatchers("/css/**");
+        web.ignoring().antMatchers("/cssLogin/**");
+        web.ignoring().antMatchers("/fonts/**");
+        web.ignoring().antMatchers("/fontsLogin/**");
+        web.ignoring().antMatchers("/iconsLogin/**");
         web.ignoring().antMatchers("/scripts/**");
         web.ignoring().antMatchers("/images/**");
+        web.ignoring().antMatchers("/js/**");
+        web.ignoring().antMatchers("/jsLogin/**");
+        web.ignoring().antMatchers("/vendorLogin/**");
         web.ignoring().antMatchers("/resources/**");
         web.ignoring().antMatchers("/ext/*/api/**");
         web.ignoring().antMatchers(HttpMethod.OPTIONS, "/**");

@@ -9,7 +9,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableFeignClients("com.BibliothequeP7.user")
-@EnableConfigurationProperties
 @EnableDiscoveryClient
 public class UserApplication {
 

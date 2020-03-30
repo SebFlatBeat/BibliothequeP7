@@ -7,10 +7,10 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient(name = "zuul-server", contextId="userProxy", configuration= FeignConfig.class )
+@FeignClient(name = "zuul-server", contextId="userProxy", configuration= FeignConfig.class, url = "http://localhost:9004" )
 @RibbonClient(name = "user")
 public interface UserProxy {
 
-    @GetMapping(value = "/user/compte/{id}/moncompte")
-    UserBean getUser(@PathVariable("id") Long id);
+   /** @GetMapping(value = "/user/compte/{id}/moncompte")
+    UserBean getUser(@PathVariable("id") Long id);*/
 }

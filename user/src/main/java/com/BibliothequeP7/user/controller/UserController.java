@@ -3,9 +3,9 @@ package com.BibliothequeP7.user.controller;
 import com.BibliothequeP7.user.dao.UserDao;
 import com.BibliothequeP7.user.entities.UserBook;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+;
 
 import java.util.List;
 import java.util.Optional;
@@ -27,6 +27,13 @@ public class UserController {
     public Optional<UserBook> login (@PathVariable String userName){
        Optional<UserBook> userBook = userDao.findByUserName(userName);
         return userBook;
+    }
+
+    @PostMapping(value = "/register")
+    public UserBook register() {
+        UserBook newUserBook = new UserBook();
+        userDao.save(newUserBook);
+        return newUserBook;
     }
 
 

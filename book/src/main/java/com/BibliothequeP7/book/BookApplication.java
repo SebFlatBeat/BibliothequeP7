@@ -10,7 +10,6 @@ import org.springframework.stereotype.Component;
 
 @SpringBootApplication
 @EnableFeignClients("com.BibliothequeP7.book")
-@EnableConfigurationProperties
 @EnableDiscoveryClient
 public class BookApplication {
 
