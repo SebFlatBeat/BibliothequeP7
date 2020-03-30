@@ -50,8 +50,8 @@ public class SecurityConfig  extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
-        http.authorizeRequests().antMatchers("/","/login" ,"/index", "/css/**", "/cssLogin/**", "/fonts/**", "/fontsLogin/**", "/img/**", "/iconsLogin/**", "/js/**,","/jsLogin/**","/vendorLogin/**").permitAll()
-                .antMatchers("/**").authenticated()
+        http.authorizeRequests().antMatchers("/","register","/login" ,"/index", "/css/**", "/cssLogin/**", "/fonts/**", "/fontsLogin/**", "/img/**", "/iconsLogin/**", "/js/**,","/jsLogin/**","/vendorLogin/**").permitAll()
+                .anyRequest().authenticated()
                 .and()
                 .formLogin()
                 .loginPage("/login")
@@ -60,7 +60,7 @@ public class SecurityConfig  extends WebSecurityConfigurerAdapter {
                 .and()
                 .logout()
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                .logoutSuccessUrl("/index")
+                .logoutSuccessUrl("/")
                 .invalidateHttpSession(true).deleteCookies("JSESSIONID");
 
     }

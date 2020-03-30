@@ -46,7 +46,7 @@ URL: https://www.freshdesignweb.com/ustora/
                 <div class="user-menu">
                     <ul>
                         <c:if test="${pageContext.request.userPrincipal == null}">
-                        <li><a href="<c:url value="/register"/>">"><i class="fa fa-user"></i> Create account</a></li>
+                        <li><a href="<c:url value="/register"/>"><i class="fa fa-user"></i> Create account</a></li>
                         <li><a href="<c:url value="/login"/>"><i class="fa fa-user"></i>Connexion</a>
                         </li>
                         </c:if>

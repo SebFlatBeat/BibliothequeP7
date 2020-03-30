@@ -14,7 +14,7 @@ public class SecurityController {
     @GetMapping("/login?logout")
     public String logout() {
 
-        return "redirect:/index";
+        return "redirect:/";
     }
 
 
