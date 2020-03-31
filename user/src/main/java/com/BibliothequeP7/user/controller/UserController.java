@@ -4,6 +4,7 @@ import com.BibliothequeP7.user.dao.UserDao;
 import com.BibliothequeP7.user.entities.UserBook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 ;
 
@@ -23,17 +24,16 @@ public class UserController {
         return userBooks;
     }
 
-    @GetMapping("/{userName}/login")
-    public Optional<UserBook> login (@PathVariable String userName){
-       Optional<UserBook> userBook = userDao.findByUserName(userName);
+    @GetMapping("/{username}/login")
+    public Optional<UserBook> login (@PathVariable String username){
+       Optional<UserBook> userBook = userDao.findByUsername(username);
         return userBook;
     }
 
-    @PostMapping(value = "/register")
-    public UserBook register() {
-        UserBook newUserBook = new UserBook();
-        userDao.save(newUserBook);
-        return newUserBook;
+    @PostMapping(value = "/registerPost")
+    public UserBook register(@RequestBody UserBook userBook) {
+        userDao.save(userBook);
+        return userBook;
     }
 
 

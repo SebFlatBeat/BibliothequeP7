@@ -50,7 +50,7 @@ public class SecurityConfig  extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
-        http.authorizeRequests().antMatchers("/","register","/login" ,"/index", "/css/**", "/cssLogin/**", "/fonts/**", "/fontsLogin/**", "/img/**", "/iconsLogin/**", "/js/**,","/jsLogin/**","/vendorLogin/**").permitAll()
+        http.authorizeRequests().antMatchers("/","/registerPost","/register","/login" ,"/index", "/css/**", "/cssLogin/**", "/fonts/**", "/fontsLogin/**", "/img/**", "/iconsLogin/**", "/js/**,","/jsLogin/**","/vendorLogin/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
@@ -73,6 +73,7 @@ public class SecurityConfig  extends WebSecurityConfigurerAdapter {
         web.ignoring().antMatchers("/fonts/**");
         web.ignoring().antMatchers("/fontsLogin/**");
         web.ignoring().antMatchers("/iconsLogin/**");
+        web.ignoring().antMatchers("/img/**");
         web.ignoring().antMatchers("/scripts/**");
         web.ignoring().antMatchers("/images/**");
         web.ignoring().antMatchers("/js/**");

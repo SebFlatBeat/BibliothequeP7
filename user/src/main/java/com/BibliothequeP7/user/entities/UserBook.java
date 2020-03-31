@@ -16,7 +16,7 @@ public class UserBook {
     @Size(max=50)
     @NotBlank
     @NotEmpty( message = "Merci de saisir un pseudo" )
-    private String userName;
+    private String username;
     @Size(max=100)
     @NotBlank
     @Email( message = "Merci de saisir une adresse mail valide." )
@@ -36,7 +36,7 @@ public class UserBook {
     public UserBook(Long id,
                     @Size(max=50)
                     @NotBlank
-                    @NotEmpty( message = "Merci de saisir un pseudo" )String userName,
+                    @NotEmpty( message = "Merci de saisir un pseudo" )String username,
                     @Size(max=100)
                     @NotBlank
                     @Email( message = "Merci de saisir une adresse mail valide." )
@@ -46,7 +46,7 @@ public class UserBook {
                     String password){
 
         this.id = id;
-        this.userName = userName;
+        this.username = username;
         this.email = email;
         this.password = password;
 
@@ -61,11 +61,11 @@ public class UserBook {
     }
 
     public String getUserName() {
-        return userName;
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUserName(String username) {
+        this.username = username;
     }
 
     public String getEmail() {
@@ -92,7 +92,7 @@ public class UserBook {
     public String toString(){
         return "UserBook{"+
                 "id=" + id +
-                ", userName=" + userName +
+                ", username=" + username +
                 ", email=" + email +
                 ", password" + password +"}";
     }

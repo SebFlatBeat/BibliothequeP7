@@ -35,43 +35,18 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55">
-				<form class="login100-form validate-form flex-sb flex-w" action="/registerPost" method="post">
+
 					<span class="login100-form-title p-b-32">
-						Account Register
+						Register Success
 					</span>
 
-					<span class="txt1 p-b-11">
-						<label for="username">Username</label>
-					</span>
-					<div class="wrap-input100 validate-input m-b-36" data-validate = "Username is required">
-						<input class="input100" type="text" name="username" id="username"/>
-						<span class="focus-input100"></span>
-					</div>
+				<span class="login100-form-title">
+					Votre compte a été crée !
+				</span>
 
-					<span class="txt1 p-b-11">
-						<label for="email">Email</label>
-					</span>
-					<div class="wrap-input100 validate-input m-b-36" data-validate = "Email is required">
-						<input class="input100" type="text" name="email" id="email"/>
-						<span class="focus-input100"></span>
-					</div>
-					
-					<span class="txt1 p-b-11">
-						<label for="password">Password</label>
-					</span>
-					<div class="wrap-input100 validate-input m-b-12" data-validate = "Password is required">
-						<input class="input100" type="text" name="password" id="password"/>
-						<span class="focus-input100"></span>
-					</div>
+				<button class="btn btn-success" href="<c:url value="/login"/>">Connexion</button>
+				<button class="btn btn-warning"href="<c:url value="/index"/>">Accueil</button>
 
-
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Create
-						</button>
-					</div>
-
-				</form>
 			</div>
 		</div>
 	</div>

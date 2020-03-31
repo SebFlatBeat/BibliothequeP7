@@ -8,9 +8,7 @@ import java.util.Collection;
 
 public class UserBean implements UserDetails {
 
-    private Long id;
-
-    private String userName;
+    private String username;
 
     private String email;
 
@@ -20,28 +18,15 @@ public class UserBean implements UserDetails {
 
     }
 
-    public UserBean(Long id, String userName, String email, String password) {
-        this.id = id;
-        this.userName = userName;
+    public UserBean(String username, String email, String password) {
+        this.username = username;
         this.email = email;
         this.password = password;
     }
 
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getEmail() {
@@ -63,7 +48,7 @@ public class UserBean implements UserDetails {
 
     @Override
     public String getUsername() {
-        return userName;
+        return username;
     }
 
     @Override
@@ -92,7 +77,7 @@ public class UserBean implements UserDetails {
 
     @Override
     public String toString() {
-        return "UserBean [id=" + id + ", userName=" + userName + ", email=" + email
+        return "UserBean [username=" + username + ", email=" + email
                 + ", password=" + password + "]";
     }
 }

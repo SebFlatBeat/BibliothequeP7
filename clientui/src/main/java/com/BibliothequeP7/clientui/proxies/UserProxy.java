@@ -6,7 +6,9 @@ import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -16,11 +18,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Component
 public interface UserProxy {
 
+    @GetMapping(value = "/user/{username}/login")
+    UserBean login(@PathVariable String username);
 
-    @GetMapping(value = "/user/{userName}/login")
-    UserBean login(@PathVariable String userName);
-
-    @PostMapping(value = "/user/register")
-    UserBean register();
+    @PostMapping(value = "/user/registerPost")
+    UserBean register(UserBean userBean);
     }
 
