@@ -7,10 +7,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 
 @FeignClient(name = "zuul-server", contextId="userProxy", configuration= FeignConfig.class, url = "http://localhost:9004")
@@ -22,6 +19,7 @@ public interface UserProxy {
     UserBean login(@PathVariable String username);
 
     @PostMapping(value = "/user/registerPost")
-    UserBean register(UserBean userBean);
+    UserBean register(@RequestBody UserBean userBean);
+
     }
 
