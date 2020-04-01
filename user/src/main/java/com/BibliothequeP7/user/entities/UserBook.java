@@ -1,5 +1,11 @@
 package com.BibliothequeP7.user.entities;
 
+import com.BibliothequeP7.user.security.BCryptEncoderConfig;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -48,7 +54,7 @@ public class UserBook {
         this.id = id;
         this.username = username;
         this.email = email;
-        this.password = password;
+        this.password = BCryptEncoderConfig.passwordencoder().encode(password);
 
     }
 
@@ -94,6 +100,6 @@ public class UserBook {
                 "id=" + id +
                 ", username=" + username +
                 ", email=" + email +
-                ", password" + password +"}";
+                ", password=" + password +"}";
     }
 }

@@ -19,7 +19,7 @@ public interface UserProxy {
     UserBean login(@PathVariable String username);
 
     @PostMapping(value = "/user/registerPost")
-    UserBean register(@RequestBody UserBean userBean);
+    UserBean register(UserBean userBean);
 
     }
 
